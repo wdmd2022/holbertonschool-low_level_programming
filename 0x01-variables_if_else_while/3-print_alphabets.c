@@ -11,12 +11,10 @@ int main(void)
 	{
 	int n;
 
-	for (n = 65; n <= 123; n++)
-	if (n <= 90)
+	for (n = 97; n <= 122; n++)
 		putchar(n);
-	else if ((n >= 97) && (n <= 122))
+	for (n = 65; n <= 90; n++)
 		putchar(n);
-	else if (n == 123)
-		putchar(10);
+	putchar(10);
 	return (0);
 }
