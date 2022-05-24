@@ -11,11 +11,13 @@ void print_alphabet_x10(void)
 
 	int m;
 
-	for (n = 0; n <= 11; n++)
-		while (n <= 10)
-		{
-			for (m = 97; m <= 122; m++)
-				_putchar(m);
-		}
-	_putchar(10);
+	n = 0;
+
+	while (n < 10)
+	{
+		for (m = 97; m <= 122; m++)
+			_putchar(m);
+		_putchar(10);
+		n++;
+	}
 }
