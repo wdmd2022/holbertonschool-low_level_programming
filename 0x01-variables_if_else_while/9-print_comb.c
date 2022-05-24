@@ -10,16 +10,15 @@
 int main(void)
 	{
 	int n;
+
 	n = 48;
 
-	while (n <= 57) {
-		if (n < 57)
-		putchar(n);
-		putchar(44);
-		putchar(32);
-		n+=1; 
-		if (n == 57)
-			putchar(n);
-	}
+	for (n = 48; n <= 57; n ++1)
+		if (n != 57)
+			putchar(n)
+				putchar(44)
+				putchar(32)
+		else
+			putchar(n)
 	return (0);
 }
