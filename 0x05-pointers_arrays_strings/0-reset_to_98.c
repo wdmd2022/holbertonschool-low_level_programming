@@ -4,6 +4,7 @@
  * reset_to_98 - takes a pointer to an int and updates the value
  * it points to, to be 98
  *
+ * @n: int
  * @*n: pointer to an int
  *
  * Return: Always 0
