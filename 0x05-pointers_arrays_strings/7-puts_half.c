@@ -20,11 +20,13 @@ void puts_half(char *str)
 
 	length--;
 
-	secondhalf = length / 2;
-
-	if (length % 2 != 0)
+	if (length % 2 == 0)
 	{
-		secondhalf++;
+		secondhalf = (length / 2) + 1;
+	}
+	else
+	{
+		secondhalf = (length / 2);
 	}
 
 	for (i = secondhalf; i <= length; i++)
