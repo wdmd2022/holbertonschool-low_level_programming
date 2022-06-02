@@ -4,7 +4,7 @@
 /**
  * print_array - prints n elements of an array of integers, then a new line
  *
- * @a: the string provided
+ * @a: the array of integery provided
  * @n: how many elements to print
  *
  * Return: Always 0
@@ -19,13 +19,13 @@ void print_array(int *a, int n)
 		{
 			if (start != (n - 1))
 			{
-				printf("%i ,", start);
+				printf("%i ,", a[start]);
 			}
 			else
 			{
-				printf("%i", start);
+				printf("%i", a[start]);
 			}
 		}
 	}
-	_putchar(10);
+	printf("\n");
 }
