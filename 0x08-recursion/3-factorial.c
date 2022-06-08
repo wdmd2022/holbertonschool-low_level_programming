@@ -1,12 +1,26 @@
 #include "main.h"
 
 /**
- * function_name - description
- * @variable: definition
+ * factorial - return the factorial of a given number
+ * @n: integer to return factorial of
  *
- * Return: Always 0
+ * Return: integer that is factorial, unless error, then return -1
  */
-prototypehere
+int factorial(int n)
 {
-	
+	int f;
+
+	if (n < 0)
+	{
+		return (-1);
+	}
+	if (n == 0)
+	{
+		f = 1;
+	}
+	if (n > 0)
+	{
+		f = n * factorial(n - 1);
+	}
+	return (f);
 }
