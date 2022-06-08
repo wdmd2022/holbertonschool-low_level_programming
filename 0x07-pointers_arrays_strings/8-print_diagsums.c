@@ -22,12 +22,12 @@ void print_diagsums(int *a, int size)
 
 	for (n = 0; n <= size; n++)
 	{
-		val1 = *a+(n*x);
+		val1 = *a + (n * x);
 		firstsum = firstsum + val1;
 	}
 	for (y = 1; y <= size; y++)
 	{
-		val2 = *a+(y*x);
+		val2 = *a + (y * x);
 		secondsum = secondsum + val2;
 		y++;
 	}
