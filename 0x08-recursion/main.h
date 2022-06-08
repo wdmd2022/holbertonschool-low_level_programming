@@ -6,5 +6,5 @@ int factorial(int n);
 int _pow_recursion(int x, int y);
 int who_let_the_roots_out(int rootytooty, int freshfruity);
 int _sqrt_recursion(int n);
-number_chumber(int nummie, int tummie);
+int number_chumber(int nummie, int tummie);
 int is_prime_number(int n);

@@ -7,7 +7,7 @@
  *
  * Return: 1 if prime, otherwise 0
  */
-number_chumber(int nummie, int tummie)
+int number_chumber(int nummie, int tummie)
 {
 	if (nummie == 1)
 	{
