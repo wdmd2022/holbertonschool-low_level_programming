@@ -13,25 +13,18 @@ void print_diagsums(int *a, int size)
 	int n;
 	int x;
 	int y;
-	int t;
-	int val1;
-	int val2;
 	int firstsum = 0;
 	int secondsum = 0;
 
-	x = size - 1;
-
-	for (n = 0; n <= size; n++)
+	for (n = 0; n < size; n++)
 	{
-		val1 = *(a + (n * x));
-		secondsum = secondsum + val1;
+		x = (n * size) + n;
+		firstsum = firstsum + *(a + x);;
 	}
-
-	t = size + 1;
 	for (y = 0; y < size; y++)
 	{
-		val2 = *(a + (y * t));
-		firstsum = firstsum + val2;
+		x = (y * size) + (size - 1 - y);
+		secondsum = secondsum + *(a + x);
 	}
 	printf("%i, %i\n", firstsum, secondsum);
 }
