@@ -19,7 +19,7 @@ void print_diagsums(int *a, int size)
 	for (n = 0; n < size; n++)
 	{
 		x = (n * size) + n;
-		firstsum = firstsum + *(a + x);;
+		firstsum = firstsum + *(a + x);
 	}
 	for (y = 0; y < size; y++)
 	{
