@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * _strncpy - copies at most n bytes of string src into dest; if src is fewer

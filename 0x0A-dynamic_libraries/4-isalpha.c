@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * _isalpha - tell is a characer is a lower/upper case letter  or not
