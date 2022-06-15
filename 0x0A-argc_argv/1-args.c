@@ -11,10 +11,6 @@
  */
 int main(int argc, char *argv[])
 {
-	int loopy;
-
 	(void)argv;
-	for(loopy = 0; loopy < argc; loopy++)
-		printf("%i\n", loopy);
-	return (0);
+	printf("%i\n", argc - 1);
 }
