@@ -2,11 +2,18 @@
 #include <stdio.h>
 
 /**
- * function_name - what the function does
+ * main - starts the function
  *
- * @variable:
- * @variable:
+ * @argc: int, how many arguments
+ * @argv: pointer to array of strings representing arguments
  *
- * Return: what it returns
+ * Return: Always 0
  */
+int main(int argc, char *argv[])
+{
+	int loopy;
 
+	for(loopy = 0; loopy < argc; loopy++)
+		printf("%i\n", loopy);
+	return (0);
+}
