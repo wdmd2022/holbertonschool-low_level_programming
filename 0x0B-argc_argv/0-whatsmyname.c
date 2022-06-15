@@ -1,12 +1,23 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * function_name - what the function does
+ * main - starts the function
  *
- * @variable:
- * @variable:
+ * @argc: integer, arguments from the command line #
+ * @argv: points to array of strings representing arguments
  *
- * Return: what it returns
+ * Return: Always 0
  */
+int main(int argc, char *argv[])
+{
+	int loopy;
+
+	(void)argc;
+	for (loopy = 0; argv[0][loopy] != '\0'; loopy++)
+	{
+		_putchar(argv[0][loopy]);
+	}
+	_putchar(10);
+	return (0);
+}
 
