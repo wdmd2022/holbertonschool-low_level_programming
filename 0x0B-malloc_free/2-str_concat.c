@@ -15,7 +15,7 @@ char *str_concat(char *s1, char *s2)
 	unsigned int s1count;
 	unsigned int s2count;
 	unsigned int totalsize;
-	unsinged int newcount;
+	unsigned int newcount;
 
 	if (s1 == NULL)
 	{
