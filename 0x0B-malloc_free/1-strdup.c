@@ -21,7 +21,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	sizey = 0;
-	while (*str)
+	while (*str++)
 	{
 		sizey++;
 	}

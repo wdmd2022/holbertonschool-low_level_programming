@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
- * function_name - description here
+ * str_concat - puts ones string after the other and terminates w/ NULL byte
  *
- * @variable: description
- * @variable: description
+ * @s1: string
+ * @s2: string
  *
- * Return: Return
+ * Return: Return pointer to beginning of new string (or NULL if can't)
  */
