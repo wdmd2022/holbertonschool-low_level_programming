@@ -21,8 +21,9 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	sizey = 0;
-	while (*str++)
+	while (str)
 	{
+		str++;
 		sizey++;
 	}
 	new = malloc(sizey * sizeof(char));
