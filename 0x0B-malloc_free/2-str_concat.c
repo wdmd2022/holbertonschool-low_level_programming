@@ -43,6 +43,9 @@ char *str_concat(char *s1, char *s2)
 	newlength = s1count + s2count + 1;
 	new = (char *)malloc(newlength * sizeof(char));
 	if (new == NULL)
+	{
+		free(new);
+		return (NULL);
 	for (x = 0; x < s1count; x++)
 	{
 		new[x] = s1[x];
