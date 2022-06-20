@@ -9,7 +9,7 @@
  *
  * Return: Always 0
  */
-free_grid(int **grid, int height)
+void free_grid(int **grid, int height)
 {
 	int count;
 
