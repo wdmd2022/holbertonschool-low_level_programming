@@ -2,10 +2,18 @@
 #include <stdlib.h>
 
 /**
- * function_name - description here
+ * free_grid - frees the grid in the previous file
  *
- * @variable: description
- * @variable: description
+ * @grid: pointer to 2-D array of ints
+ * @height: int
  *
- * Return: Return
+ * Return: Always 0
  */
+free_grid(int **grid, int height)
+{
+	int count;
+
+	for (count = 0; count < height; count++)
+	{
+		free(grid[count]);
+}
