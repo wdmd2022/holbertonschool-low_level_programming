@@ -18,16 +18,31 @@ char *str_concat(char *s1, char *s2)
 	int x;
 	int y;
 
-	while (s1[s1count])
+	if (s1 == NULL)
 	{
-		s1count++;
+		s1count = 0;
 	}
-	while (s2[s2count])
+	else
 	{
+		while (s1[s1count])
+		{
+		s1count++;
+		}
+	}
+	if (s2 == NULL)
+	{
+		s2count = 0;
+	}
+	else
+	{
+		while (s2[s2count])
+		{
 		s2count++;
+		}
 	}
 	newlength = s1count + s2count + 1;
 	new = (char *)malloc(newlength * sizeof(char));
+	if (new == NULL)
 	for (x = 0; x < s1count; x++)
 	{
 		new[x] = s1[x];
