@@ -32,10 +32,14 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 	for (x = 0; x < s1count; x++)
+	{
 		new[x] = s1[x];
+	}
 	for (y = 0; y < s2count; y++)
+	{
 		new[x] = s2[y];
 		x++;
+	}
 	new[x] = '\0';
 	return (new);
 }
