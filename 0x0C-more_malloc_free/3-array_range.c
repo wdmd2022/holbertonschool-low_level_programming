@@ -2,14 +2,14 @@
 #include <stdlib.h>
 
 /**
- * array_range - uses malloc to allocate memory for an array of nmemb elements of
- * size bytes each, returning a pointer to the allocated memory, all set to 0
+ * array_range - create array of integers, containing all values from min
+ * to max, in that order
  *
- * @min: unsigned int, how many elements
- * @max: unsigned int, how big each element is
+ * @min: int
+ * @max: int
  *
- * Return: a pointer to the allocated memory or NULL if nmemb or size are 0,
- * or if malloc fails
+ * Return: a pointer to the array, but if min is greater than max, or if
+ * malloc fails, return NULL
  */
 int *array_range(int min, int max)
 {
