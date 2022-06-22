@@ -7,7 +7,7 @@
  *
  * @s1: string 1
  * @s2: string 2
- * n: unsigned int, how many bytes maximum of 2 to copy
+ * @n: unsigned int, how many bytes maximum of 2 to copy
  *
  * Return: a pointer to the allocated memory or NULL if function fails
  */
