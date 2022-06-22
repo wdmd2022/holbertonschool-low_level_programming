@@ -9,9 +9,9 @@
  * Return: a pointer to the allocated memory, or terminate with status value
  * of 98 if fails
  */
-char *malloc_checked(unsigned int b)
+void *malloc_checked(unsigned int b)
 {
-	char *n;
+	void *n;
 
 	n = malloc(b);
 	if (n == NULL)
