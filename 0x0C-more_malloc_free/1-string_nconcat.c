@@ -16,6 +16,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *new;
 	unsigned int countone = 0, counttwo = 0;
 	unsigned int indexone, indextwo;
+	char *junk;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -43,5 +44,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		new[indextwo] = s2[indextwo - countone];
 	}
 	new[indextwo] = '\0';
+	junk = malloc(5);
+	free(junk);
 	return (new);
 }
