@@ -12,7 +12,7 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	long unsigned int county;
+	unsigned long int county;
 
 	if ((array == NULL) || (action == NULL))
 	{
