@@ -22,9 +22,9 @@ int sum_them_all(const unsigned int n, ...)
 
 	for (counter = 0; counter < n; counter++)
 	{
-		sum = sum + va_arg (argpointer, int);
+		sum = sum + va_arg(argpointer, int);
 	}
-	
-	va_end (argpointer);
+
+	va_end(argpointer);
 	return (sum);
 }
