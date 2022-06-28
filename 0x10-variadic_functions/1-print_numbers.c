@@ -18,7 +18,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf("\n");
 		return;
 	}
-	
+
 	va_start(argpointer, n);
 
 	if (separator == NULL)
@@ -31,7 +31,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		va_end(argpointer);
 		return;
 	}
-	
+
 	x = 1;
 	while (x < n)
 	{
@@ -40,5 +40,4 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	}
 	printf("%i\n", va_arg(argpointer, int));
 	va_end(argpointer);
-	return;
 }
