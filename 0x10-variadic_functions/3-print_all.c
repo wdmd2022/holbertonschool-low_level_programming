@@ -31,7 +31,7 @@ void f_printer(va_list f)
 
 /**
  * s_printer - prints a string
- * s: string to print
+ * @s: string to print
  * Return: nothing
  */
 void s_printer(va_list s)
@@ -42,7 +42,7 @@ void s_printer(va_list s)
 /**
  * print_all - prints whatever
  *
- * format: list of types of arguments to be passed to function, where
+ * @format: list of types of arguments to be passed to function, where
  * c is a char, i is an integer, f is a float, s is a char * (and if
  * the string is NULL, we will print (nil) instead. All other arguments
  * are ignored.
