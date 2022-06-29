@@ -82,5 +82,5 @@ void print_all(const char * const format, ...)
 		n++;
 	}
 	va_end(args);
-	printf(\n);
+	printf("\n");
 }
