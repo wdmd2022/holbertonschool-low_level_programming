@@ -7,13 +7,12 @@
  */
 size_t listint_len(const listint_t *h)
 {
-	unsigned int county = 0;
+	size_t county = 0;
 
 	while (h != NULL)
 	{
 		county++;
 		h = h->next;
 	}
-	county++;
 	return (county);
 }
