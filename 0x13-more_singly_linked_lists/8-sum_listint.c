@@ -5,7 +5,7 @@
  * @head: pointer, head of the list
  * Return: sum, unless list is empty, in which case return 0
  */
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
+int sum_listint(listint_t *head)
 {
 	int additup = 0;
 
