@@ -9,7 +9,7 @@
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned int county;
-	listint_t nodey1, nodey2;
+	listint_t *node1, *node2;
 
 	if (head == NULL || *head == NULL)
 		return (-1);
