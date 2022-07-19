@@ -12,26 +12,26 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int describo, checko;
-	int loopster = 0;
+	int d, checko;
+	int county = 0;
 
 	if (filename == NULL)
 	{
 		return (-1);
 	}
-	describo = open(filename, O_CREAT | O_WRONLY, 0600 | O_TRUNC);
-	if (describo == -1)
+	d = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
+	if (d == -1)
 	{
 		return (-1);
 	}
 	if (text_content != NULL)
 	{
-		for (; text_content[loopster]; loopster++)
+		for (; text_content[county]; county++)
 			;
-		checko = write(describo, text_content, loopster);
+		checko = write(d, text_content, county);
 		if (checko == -1)
 			return (-1);
 	}
-	close(describo);
+	close(d);
 	return (1);
 }
