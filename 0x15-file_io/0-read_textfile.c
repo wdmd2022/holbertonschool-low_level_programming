@@ -12,7 +12,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t howmanyread, how manywritten;
+	ssize_t howmanyread, howmanywritten;
 	char *buffdude;
 	int checky;
 
@@ -20,7 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	checky = open(filename, 0_RDONLY);
+	checky = open(filename, O_RDONLY);
 	if (checky == -1)
 	{
 		return (0);
@@ -35,5 +35,4 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	free(buffdude);
 	close(checky);
 	return (howmanywritten);
-}
 }
