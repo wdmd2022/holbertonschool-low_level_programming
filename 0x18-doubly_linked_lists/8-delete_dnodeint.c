@@ -17,7 +17,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	tempeh = *head;
 
-	for (county = 0; county < index; county++, tempeh = tempeh->next)
+	for (county = 0; county <= index; county++, tempeh = tempeh->next)
 	{
 		if (tempeh == NULL)
 			return (-1);
