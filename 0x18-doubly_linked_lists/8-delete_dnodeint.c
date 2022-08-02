@@ -10,17 +10,18 @@
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *tempeh = NULL;
-	unsigned int county;
 
 	if (head == NULL)
 		return (-1);
 
 	tempeh = *head;
 
-	for (county = 0; county < index; county++, tempeh = tempeh->next)
+	while (index != 0)
 	{
 		if (tempeh == NULL)
 			return (-1);
+		index--;
+		tempeh = tempeh->next;
 	}
 
 	if (index == 0 && (((*head)->next) == NULL))
