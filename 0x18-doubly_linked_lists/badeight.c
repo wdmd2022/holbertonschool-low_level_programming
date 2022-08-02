@@ -14,31 +14,33 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	if (head == NULL)
 		return (-1);
-
+	if ((index == 0) && ((*head)->next == NULL))
+	{
+		free(*head);
+		return (1);
+	}
 	tempeh = *head;
-
-	for (county = 0; county < index; county++, tempeh = tempeh->next)
+	if (index == 0)
+	{
+		(*head)->next->prev = NULL;
+		*head = (*head)->next;
+		if (*head != NULL)
+			free(tempeh);
+		return (1);
+	}
+	for (county = 0; county < index; county++)
 	{
 		if (tempeh == NULL)
 			return (-1);
-	}
-
-	if (tempeh == *head)
-	{
-		*head = (*head)->next;
-		if (*head != NULL)
+		if (tempeh->next == NULL)
 		{
-			(*head)->prev = NULL;
+			free(tempeh);
+			return (1);
 		}
+		tempeh = tempeh->next;
 	}
-	else
-	{
-		if (tempeh->next != NULL)
-		{
-			(tempeh->next)->prev = tempeh->prev;
-		}
-		(tempeh->prev)->next = tempeh->next;
-	}
+	(tempeh->next)->prev = tempeh->prev;
+	(tempeh->prev)->next = tempeh->next;
 	free(tempeh);
 	return (1);
 }
