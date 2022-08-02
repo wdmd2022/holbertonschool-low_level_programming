@@ -40,11 +40,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 	else
 	{
+		tempeh->prev->next = tempeh->next;
 		if (tempeh->next != NULL)
-		{
 			(tempeh->next)->prev = tempeh->prev;
-		}
-		(tempeh->prev)->next = tempeh->next;
 	}
 	free(tempeh);
 	return (1);
