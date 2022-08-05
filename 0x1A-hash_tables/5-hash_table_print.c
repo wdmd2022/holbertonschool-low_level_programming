@@ -24,7 +24,7 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			if (format == 0)
 				printf(", ");
-			printf("'%s': '%'", surfer->key, surfer->value);
+			printf("'%s': '%s'", surfer->key, surfer->value);
 			format = 0;
 			surfer = surfer->next;
 		}
