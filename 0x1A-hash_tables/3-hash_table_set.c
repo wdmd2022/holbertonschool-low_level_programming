@@ -13,45 +13,30 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	char *valuecopy;
-	hash_node_t *newnode, *tempeh;
+	hash_node_t *newnode = NULL, *tempeh = NULL;
 
 	if (!key || !ht || *key == '\0')
 		return (0);
 
 	valuecopy = strdup(value);
-	if (value_copy == NULL)
+	if (valuecopy == NULL)
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
 	
-	if (ht->array[index])
+	tempeh = ht->array[index];
+	if (tempeh && strcmp(key, tempeh->key) == 0)
 	{
-		tempeh = ht->array[index];
-		while (tempeh)
-		{
-
-
-	if (!ht->*array[index]) /* make the node if there isn't one yet */
-	{
-		ht->*array[index] = malloc(sizeof(hash_node_t));
-		if (!ht->*array[index])
-		{
-			free(valuecopy);
-			return (0);
-		}
-		ht->*array[index]->key = strdup(key);
-		if (!ht->*array[index]->key)
-		{
-			free(valuecopy);
-			free(newnode);
-			return (0);
-		ht->*array[index]->value = valuecopy;
-		ht->*array[index]->next = NULL;
+		free(tempeh->value);
+		tempeh->value = valuecopy;
+		return (1);
 	}
-	if (ht->*array[index]) /* make it in the front if there is one already */
-	{
-		tempnode = malloc(sizeof(hash_node_t));
-		tempnode->
-
-
+	newnode = malloc(sizeof(hash_node_t));
+	if (!newnode)
+		return (0);
+	newnode->value = strdup(value);
+	newnode->key = strdup(key);
+	newnode->next = ht->array[index];
+	ht->array[index] = newnode;
+	return (1);
 }
